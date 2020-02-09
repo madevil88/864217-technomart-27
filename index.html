@@ -3,19 +3,23 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Интернет-магазин «Техномарт»</title>
 </head>
 
 <body>
   <header>
-    <a>
+    <a href="#">
       <img src="img/logo-technomart.svg" width="109" height="18" alt="Логотип интернет-магазина «Техномарт»">
     </a>
     <ul>
       <li>
         <p>Поиск:</p>
-        <!-- Здесь будет форма поиска -->
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <label for="site_search" class="visually-hidden">Введите поисковый запрос </label>
+          <input type="search" id="site_search" name="search">
+        </form>
       </li>
       <li>
         <a href="#">Закладки: 0</a>
@@ -41,7 +45,7 @@
     <nav>
       <ul>
         <li>
-          <a>Главная</a>
+          <a href="#">Главная</a>
         </li>
         <li>
           <a href="#">Компания</a>
@@ -65,9 +69,9 @@
     </nav>
   </header>
   <main>
-    <h1>Интернет-магазин «Техномарт»</h1>
+    <h1 class="visually-hidden">Интернет-магазин «Техномарт»</h1>
     <section>
-      <h2>Разделы сайта</h2>
+      <h2 class="visually-hidden">Разделы сайта</h2>
       <ul>
         <li>
           <p>Материалы</p>
@@ -96,19 +100,18 @@
       <div class="slider_controls">
         <label for="switch1"></label>
         <label for="switch2"></label>
-        <input type="radio" id="switch1" name="slider" checked>
-        <input type="radio" id="switch2" name="slider">
+        <input type="radio" id="switch1" name="slider_controls">
+        <input type="radio" id="switch2" name="slider_controls" checked>
       </div>
       <div class="slider_images">
         <ul>
           <li>
             <a href="catalog.html">
-              <img src="img/man_and_drill.jpg" width="620" height="266" alt="Мужчина с дрелью">
+              <img src="img/man_and_puncher.jpg" width="620" height="266" alt="Мужчина с перфоратором">
             </a>
-          </li>
           <li>
             <a href="catalog.html">
-              <img src="img/man_and_puncher.jpg" width="620" height="266" alt="Мужчина с перфоратором">
+              <img src="img/man_and_drill.jpg" width="620" height="266" alt="Мужчина с дрелью">
             </a>
           </li>
         </ul>
@@ -120,10 +123,8 @@
       <a href="#">Все популярные товары</a>
       <ul>
         <li>
-          <h3>
-            <a href="#">Перфоратор BOSCH BFG 9000</a>
-          </h3>
           <a href="#">
+            <h3>Перфоратор BOSCH BFG 9000</h3>
             <img src="img/bosch_bfg_9000.jpg" width="218" height="170" alt="Компактный перфоратор">
           </a>
           <p>32500 Р.
@@ -131,10 +132,8 @@
           </p>
         </li>
         <li>
-          <h3>
-            <a href="#">Перфоратор BOSCH BFG 3000</a>
-          </h3>
           <a href="#">
+            <h3>Перфоратор BOSCH BFG 3000</h3>
             <img src="img/bosch_bfg_3000.jpg" width="218" height="170" alt="Синий перфоратор">
           </a>
           <p>25500 Р.
@@ -142,10 +141,8 @@
           </p>
         </li>
         <li>
-          <h3>
-            <a href="#">Перфоратор BOSCH BFG 6000</a>
-          </h3>
           <a href="#">
+            <h3>Перфоратор BOSCH BFG 6000</h3>
             <img src="img/bosch_bfg_6000.jpg" width="218" height="170" alt="Перфоратор с мощным патроном">
           </a>
           <p>30500 Р.
@@ -153,10 +150,8 @@
           </p>
         </li>
         <li>
-          <h3>
-            <a href="#">Перфоратор BOSCH BFG 2000</a>
-          </h3>
           <a href="#">
+            <h3>Перфоратор BOSCH BFG 2000</h3>
             <img src="img/bosch_bfg_2000.jpg" width="218" height="170" alt="Удобный, маломощьный перфоратор">
           </a>
           <p>
@@ -216,17 +211,17 @@
       <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
       <div class="services_slider">
         <div class="slider_controls">
-          <label for="switch1"></label>
-          <label for="switch2"></label>
-          <label for="switch3"></label>
-          <input type="radio" id="switch1" name="slider" checked>
-          <input type="radio" id="switch2" name="slider">
-          <input type="radio" id="switch3" name="slider">
+          <label for="services_switch1"></label>
+          <label for="services_switch2"></label>
+          <label for="services_switch3"></label>
+          <input type="radio" id="services_switch1" name="services_slider" checked>
+          <input type="radio" id="services_switch2" name="services_slider">
+          <input type="radio" id="services_switch3" name="services_slider">
         </div>
         <div class="services_slider_images">
           <ul>
             <li>
-              <p>Доставка</p>
+              <a href="#">Доставка</a>
               <h4>Доставка</h4>
               <p>Мы с удовольствием доставим ваш товар прямо<br>
                 к вашему подъезду совершенно бесплатно!
@@ -235,7 +230,7 @@
               <img src="img/delivery.png" width="468" height="261" alt="Быстрая доставка">
             </li>
             <li>
-              <p>Гарантия</p>
+              <a href="#">Гарантия</a>
               <h4>Гарантия</h4>
               <p>Если купленный у нас товар поломается или заискрит,<br>
                 а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br>
@@ -243,7 +238,7 @@
               <img src="img/warranty.png" width="389" height="283" alt="Надежная гарантия">
             </li>
             <li>
-              <p>Кредит</p>
+              <a href="#">Кредит</a>
               <h4>Кредит</h4>
               <p>Залезть в долговую яму стало проще!<br>
                 Кредитные консультанты придут вам на помощь.</p>
@@ -276,7 +271,7 @@
     </section>
   </main>
   <footer>
-    <a>
+    <a href="#">
       <img src="img/logo-technomart.svg" width="109" height="18" alt="Логотип интернет-магазина «Техномарт»">
     </a>
     <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
@@ -316,13 +311,13 @@
     <p>Все права защищены</p>
     <ul>
       <li>
-        <a href="#">Вконтакте</a>
+        <a href="https://vk.com" target="_blank">Вконтакте</a>
       </li>
       <li>
-        <a href="#">Фейсбук</a>
+        <a href="https://ru-ru.facebook.com" target="_blank">Фейсбук</a>
       </li>
       <li>
-        <a href="#">Инстаграм</a>
+        <a href="https://www.instagram.com/?hl=ru" target="_blank">Инстаграм</a>
       </li>
     </ul>
     <div>
@@ -334,14 +329,27 @@
       <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a>
     </div>
   </footer>
-  <section>
-    <h2>Личный кабинет</h2>
-    <p>Введите свой логин и пароль.</p>
-    <!--Здесь будет форма-->
+  <section class="popup feedback visually-hidden">
+    <h2 class="visually-hidden">Написать нам</h2>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <p>
+        <label for="feedback_name">Ваше имя:</label>
+        <input type="text" name="name" id="feedback_name" placeholder="Имя Фамилия">
+      </p>
+      <p>
+        <label for="feedback_email">Ваш e-mail:</label>
+        <input type="email" name="email" id="feedback_email" placeholder="email@example.com">
+      </p>
+      <p>
+        <label for="feedback_text">Текст письма:</label>
+        <textarea name="feedback_text" id="feedback_text" placeholder="В свободной форме"></textarea>
+      </p>
+      <button type="submit">Отправить</button>
+    </form>
     <button type="button">Закрыть</button>
   </section>
-  <section>
-    <h2>Как до нас добраться</h2>
+  <section class="popup map visually-hidden">
+    <h2 class="visually-hidden">Как до нас добраться</h2>
     <img src="img/map.jpg" width="970" height="476" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
     <button type="button">Закрыть</button>
   </section>
