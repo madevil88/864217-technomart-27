@@ -47,7 +47,7 @@
     <nav>
       <ul>
         <li>
-          <a href="#">Главная</a>
+          <a href="index.html">Главная</a>
         </li>
         <li>
           <a href="#">Компания</a>
@@ -85,10 +85,8 @@
           <legend>Цена:</legend>
           <div class="range-slider">
             <input type="number" value="0" name="min">
-            <input type="number" value="30000" name="max">
-            <output name="minval"></output>
             <span> &#8212; </span>
-            <output name="maxval"></output>
+            <input type="number" value="30000" name="max">
             <div class="range-slider-track">
               <div class="range-slider-pin range-slider-pin-min">
               </div>
@@ -101,29 +99,24 @@
           <legend>Производители:</legend>
           <ul>
             <li>
-              <label>
-                <input type="checkbox" name="bosch" checked> Bosch
-              </label>
+              <input type="checkbox" name="bosch" id="bosch" checked>
+              <label for="bosch"> Bosch</label>
             </li>
             <li>
-              <label>
-                <input type="checkbox" name="interskol"> Интерскол
-              </label>
+              <input type="checkbox" name="interskol" id="interskol">
+              <label for="interskol"> Интерскол</label>
             </li>
             <li>
-              <label>
-                <input type="checkbox" name="makita" checked> Makita
-              </label>
+              <input type="checkbox" name="makita" id="makita" checked>
+              <label for="makita"> Makita</label>
             </li>
             <li>
-              <label>
-                <input type="checkbox" name="dewalt"> Dewalt
-              </label>
+              <input type="checkbox" name="dewalt" id="dewalt">
+              <label for="dewalt"> Dewalt</label>
             </li>
             <li>
-              <label>
-                <input type="checkbox" name="hitachi"> Hitachi
-              </label>
+              <input type="checkbox" name="hitachi" id="hitachi">
+              <label for="hitachi"> Hitachi</label>
             </li>
           </ul>
         </fieldset>
@@ -131,18 +124,16 @@
           <legend>Питание:</legend>
           <ul>
             <li>
-              <label>
-                <input type="radio" name="power_supply" value="rechargeable" checked> Аккумуляторные
-              </label>
+              <input type="radio" name="power_supply" value="rechargeable" id="rechargeable" checked>
+              <label for="rechargeable"> Аккумуляторные</label>
             </li>
             <li>
-              <label>
-                <input type="radio" name="power_supply" value="network"> Сетевые
-              </label>
+              <input type="radio" name="power_supply" value="network" id="network">
+              <label for="network"> Сетевые</label>
             </li>
           </ul>
         </fieldset>
-        <button type="button">Показать</button>
+        <button type="submit">Показать</button>
       </form>
     </section>
     <section>
@@ -151,8 +142,8 @@
         <li><a href="#">По цене</a></li>
         <li><a href="#">По типу</a></li>
         <li><a href="#">По функционалу</a></li>
-        <li><a href="#" class="visually-hidden">Больше</a></li>
-        <li><a href="#" class="visually-hidden">Меньше</a></li>
+        <li><button type="button">Больше</button></li>
+        <li><button type="button">Меньше</button></li>
       </ul>
     </section>
     <section>
@@ -315,6 +306,13 @@
       <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a>
     </div>
   </footer>
+  <section class="popup cartplus visually-hidden">
+    <h2 class="visually-hidden">Товар в корзине</h2>
+    <p>Товар добавлен в корзину!</p>
+    <a href="#">Оформить заказ</a>
+    <a href="#">Продолжить покупки</a>
+    <button type="button">Закрыть</button>
+  </section>
 </body>
 
 </html>
