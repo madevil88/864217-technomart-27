@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Каталог товаров «Техномарт»</title>
-  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i%7cPT+Sans:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-  <body>
-    <header class="header">
+<body>
+  <header class="header">
+    <div class="center-top-background">
       <div class="top-background">
         <a class="main-logo">
           <img src="img/logo-technomart.svg" width="109" height="18" alt="Логотип интернет-магазина «Техномарт»">
@@ -36,21 +36,30 @@
           </li>
         </ul>
       </div>
-      <p class="site-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
-      <div>
-        <a class="phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
-        <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+    </div>
+    <div class="light-blue-background">
+      <div class="header-middle-block">
+        <p class="site-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
+        <div class="header-contacts">
+          <a class="phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+        </div>
+        <div class="user-information">
+          <a class="user-login" href="">Равшан Джамшутович</a>
+          <button class="exit" type="button">Выход</button>
+          <ul class="user-navigation">
+            <li>
+              <a href="#">Мои заказы</a>
+            </li>
+            <li>
+              <span></span>
+            </li>
+            <li>
+              <a href="#">Личный кабинет</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <a class="user-login" href="">Равшан Джамшутович</a>
-      <button type="button">Выход</button>
-      <ul class="user-navigation">
-        <li>
-          <a href="#">Мои заказы</a>
-        </li>
-        <li>
-          <a href="#">Личный кабинет</a>
-        </li>
-      </ul>
       <nav class="navigation-box">
         <ul class="main-navigation">
           <li>
@@ -76,17 +85,32 @@
           </li>
         </ul>
       </nav>
-    </header>
-    <main class="catalog-main-container">
-      <h1 class="catalog-title">Перфораторы</h1>
-      <ul class="breadcrambs">
-        <li><a class="index-page" href="index.html">Главная</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li><a href="#">Инструмент</a></li>
-        <li><a class="page-active">Перфораторы</a></li>
-      </ul>
+    </div>
+  </header>
+  <main class="catalog-main-container">
+    <ul class="breadcrambs container">
+      <li><a class="index-page" href="index.html">Главная</a></li>
+      <li><a href="catalog.html">Каталог</a></li>
+      <li><a href="#">Инструмент</a></li>
+      <li><a class="page-active">Перфораторы</a></li>
+    </ul>
+    <h1 class="catalog-title container">Перфораторы</h1>
+    <div class="index-columns  container">
+      <h3 class="filter-title">Фильтр:</h3>
+      <section class="sorting">
+        <h3>Сортировка:</h3>
+        <ul>
+          <li><a href="#">По цене</a></li>
+          <li><a href="#">По типу</a></li>
+          <li><a href="#">По функционалу</a></li>
+          <li><button type="button">Больше</button></li>
+          <li><button type="button">Меньше</button></li>
+        </ul>
+      </section>
+    </div>
+    <div class="index-columns container">
       <section class="filter">
-        <h3>Фильтр:</h3>
+        <h3 class="visually-hidden">Фильтры товаров</h3>
         <form action="https://echo.htmlacademy.ru" method="get">
           <fieldset>
             <legend>Цена:</legend>
@@ -143,20 +167,10 @@
           <button type="submit">Показать</button>
         </form>
       </section>
-      <section class="sorting">
-        <h3>Сортировка:</h3>
-        <ul>
-          <li><a href="#">По цене</a></li>
-          <li><a href="#">По типу</a></li>
-          <li><a href="#">По функционалу</a></li>
-          <li><button type="button">Больше</button></li>
-          <li><button type="button">Меньше</button></li>
-        </ul>
-      </section>
       <section>
         <h2 class="visually-hidden">Каталог перфораторов</h2>
-        <ul class="good-items">
-          <li>
+        <ul class="good-list catalog-good-list">
+          <li class="good-item">
             <div class="order-item">
               <a class="button buy" href="#">Купить</a>
               <a class="button to-bookmarks" href="#">В закладки</a>
@@ -173,7 +187,7 @@
               <a class="button-item" href="#">15500 Р.</a>
             </p>
           </li>
-          <li>
+          <li class="good-item">
             <div class="order-item">
               <a class="button buy" href="#">Купить</a>
               <a class="button to-bookmarks" href="#">В закладки</a>
@@ -190,7 +204,7 @@
               <a class="button-item" href="#">25500 Р.</a>
             </p>
           </li>
-          <li class="label-new">
+          <li class="good-item label-new">
             <div class="order-item">
               <a class="button buy" href="#">Купить</a>
               <a class="button to-bookmarks" href="#">В закладки</a>
@@ -206,7 +220,7 @@
               <a class="button-item" href="#">12500 Р.</a>
             </p>
           </li>
-          <li>
+          <li class="good-item">
             <div class="order-item">
               <a class="button buy" href="#">Купить</a>
               <a class="button to-bookmarks" href="#">В закладки</a>
@@ -223,7 +237,7 @@
               <a class="button-item" href="#">15500 Р.</a>
             </p>
           </li>
-          <li class="label-new">
+          <li class="good-item label-new">
             <div class="order-item">
               <a class="button buy" href="#">Купить</a>
               <a class="button to-bookmarks" href="#">В закладки</a>
@@ -240,7 +254,7 @@
               <a class="button-item" href="#">25500 Р.</a>
             </p>
           </li>
-          <li>
+          <li class="good-item">
             <div class="order-item">
               <a class="button buy" href="#">Купить</a>
               <a class="button to-bookmarks" href="#">В закладки</a>
@@ -256,7 +270,7 @@
               <a class="button-item" href="#">12500 Р.</a>
             </p>
           </li>
-          <li class="label-new">
+          <li class="good-item label-new">
             <div class="order-item">
               <a class="button buy" href="#">Купить</a>
               <a class="button to-bookmarks" href="#">В закладки</a>
@@ -273,7 +287,7 @@
               <a class="button-item" href="#">15500 Р.</a>
             </p>
           </li>
-          <li>
+          <li class="good-item">
             <div class="order-item">
               <a class="button buy" href="#">Купить</a>
               <a class="button to-bookmarks" href="#">В закладки</a>
@@ -290,7 +304,7 @@
               <a class="button-item" href="#">25500 Р.</a>
             </p>
           </li>
-          <li>
+          <li class="good-item">
             <div class="order-item">
               <a class="button buy" href="#">Купить</a>
               <a class="button to-bookmarks" href="#">В закладки</a>
@@ -314,19 +328,21 @@
           <li><a class="next-page" href="#">Следующая</a></li>
         </ul>
       </section>
-      <section class="category-description">
+    </div>
+    <section class="light-blue-background category-description">
+      <div class="container">
         <h2>Пара слов о перфораторах</h2>
         <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
           Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="footer-top-background">
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-top-background">
+      <div class="footer-container-top">
         <a class="footer-logo">
           <img src="img/logo-technomart.svg" width="109" height="18" alt="Логотип интернет-магазина «Техномарт»">
         </a>
-        <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-        <a class="phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
         <ul class="footer-first-menu">
           <li>
             <a href="#">Компания</a>
@@ -344,6 +360,12 @@
             <a href="#">Контакты</a>
           </li>
         </ul>
+      </div>
+      <div class="footer-container-top">
+        <div class="footer-contacts">
+          <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+          <a class="phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+        </div>
         <ul class="footer-second-menu">
           <li>
             <a href="#">Материалы</a>
@@ -359,9 +381,13 @@
           </li>
         </ul>
       </div>
-      <div class="footer-bottom-background">
-        <p class="developer-company">&#169; 2010–2019 Компания «Техномарт»</p>
-        <p class="developer-company">Все права защищены</p>
+    </div>
+    <div class="footer-bottom-background">
+      <div class="footer-container-bottom">
+        <div class="developer-company">
+          <p>&#169; 2010–2019 Компания «Техномарт»</p>
+          <p>Все права защищены</p>
+        </div>
         <div class="social-buttons">
           <ul>
             <li>
@@ -384,16 +410,17 @@
           <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a>
         </div>
       </div>
-    </footer>
-    <section class="popup cartplus">
-      <h2 class="visually-hidden">Товар в корзине</h2>
-      <p>Товар добавлен в корзину!</p>
-      <div class="buttons-area">
-        <a class="button button-red" href="#">Оформить заказ</a>
-        <a class="button button-red" href="#">Продолжить покупки</a>
-      </div>
-      <button type="button">Закрыть</button>
-    </section>
-  </body>
+    </div>
+  </footer>
+  <section class="popup cartplus">
+    <h2 class="visually-hidden">Товар в корзине</h2>
+    <p>Товар добавлен в корзину!</p>
+    <div class="buttons-area">
+      <a class="button button-red" href="#">Оформить заказ</a>
+      <a class="button button-red" href="#">Продолжить покупки</a>
+    </div>
+    <button class="close" type="button">Закрыть</button>
+  </section>
+</body>
 
 </html>
