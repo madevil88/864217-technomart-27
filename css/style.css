@@ -254,8 +254,6 @@ a {
 .header-middle-block {
   display: flex;
   align-items: center;
-  margin: 0 auto;
-  width: 940px;
   min-height: 158px;
 }
 
@@ -338,8 +336,6 @@ a {
 
 .navigation-box {
   display: flex;
-  width: 940px;
-  margin: 0 auto;
   min-height: 60px;
   background-color: #32425c;
   margin-bottom: 60px;
@@ -1007,8 +1003,6 @@ a {
 .footer-container-bottom {
   display: flex;
   justify-content: space-between;
-  width: 940px;
-  margin: 0 auto;
 }
 
 .footer-top-background {
@@ -1447,6 +1441,7 @@ a {
 
 .category-description {
   margin-top: 60px;
+  padding-bottom: 55px;
 }
 
 .category-description h2 {
@@ -1459,7 +1454,7 @@ a {
 }
 
 .category-description p {
-  margin-bottom: 73px;
+  width: 910px;
   text-transform: none;
   font-size: 13px;
   line-height: 24px;
