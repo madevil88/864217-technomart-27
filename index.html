@@ -17,19 +17,24 @@
           <img src="img/logo-technomart.svg" width="109" height="18" alt="Логотип интернет-магазина «Техномарт»">
         </a>
         <ul class="main-menu">
-          <li class="site-search">
-            <form action="https://echo.htmlacademy.ru" method="get">
+          <li>
+            <form class="site-search" action="https://echo.htmlacademy.ru" method="get">
               <label for="site-search">
                 Поиск:
               </label>
               <input type="search" id="site-search" name="search">
+              <div class="loupe">
+                <svg class="loupe" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                  <path fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" />
+                </svg>
+              </div>
             </form>
           </li>
           <li>
-            <a href="#">Закладки: 0</a>
+            <a class="bookmarks-index" href="#">Закладки: 0</a>
           </li>
           <li>
-            <a href="#">Корзина: 0</a>
+            <a class="cart-index" href="#">Корзина: 0</a>
           </li>
           <li>
             <a class="checkout" href="#">Оформить заказ</a>
@@ -47,6 +52,9 @@
         <ul class="user-navigation">
           <li>
             <a class="sign-in" href="#">Войти</a>
+            <svg class="icon-login" xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+              <path fill="#c5c5c5" d="M14.875 8.5L6 0v6H0v5h6v6z" />
+              <path fill="#c5c5c5" d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z" /></svg>
           </li>
           <li>
             <a class="sign-up" href="#">Регистрация</a>
@@ -388,13 +396,13 @@
         <div class="social-buttons">
           <ul>
             <li>
-              <a href="https://vk.com" target="_blank">Вконтакте</a>
+              <a class="vk" href="https://vk.com" target="_blank">Вконтакте</a>
             </li>
             <li>
-              <a href="https://ru-ru.facebook.com" target="_blank">Фейсбук</a>
+              <a class="fb" href="https://ru-ru.facebook.com" target="_blank">Фейсбук</a>
             </li>
             <li>
-              <a href="https://www.instagram.com/?hl=ru" target="_blank">Инстаграм</a>
+              <a class="insta" href="https://www.instagram.com/?hl=ru" target="_blank">Инстаграм</a>
             </li>
           </ul>
         </div>

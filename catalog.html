@@ -17,19 +17,24 @@
           <img src="img/logo-technomart.svg" width="109" height="18" alt="Логотип интернет-магазина «Техномарт»">
         </a>
         <ul class="main-menu">
-          <li class="site-search">
-            <form action="https://echo.htmlacademy.ru" method="get">
+          <li>
+            <form class="site-search" action="https://echo.htmlacademy.ru" method="get">
               <label for="site-search">
                 Поиск:
               </label>
               <input type="search" id="site-search" name="search">
+              <div class="loupe">
+                <svg class="loupe" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                  <path fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" />
+                </svg>
+              </div>
             </form>
           </li>
           <li>
-            <a href="#">Закладки: 0</a>
+            <a class="bookmarks-index" href="#">Закладки: 0</a>
           </li>
           <li>
-            <a class="more-one" href="#">Корзина: 10</a>
+            <a class="cart-index more-one" href="#">Корзина: 10</a>
           </li>
           <li>
             <a class="checkout" href="#">Оформить заказ</a>
@@ -45,8 +50,19 @@
           <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         </div>
         <div class="user-information">
-          <a class="user-login" href="">Равшан Джамшутович</a>
-          <button class="exit" type="button">Выход</button>
+          <a class="user-login" href="#">Равшан Джамшутович</a>
+          <svg class="icon-user" xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18">
+            <path fill="#c5c5c5" d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z" />
+          </svg>
+          <button class="exit" type="button">
+            <span class="visually-hidden">Выход</span>
+            <svg class="icon-logout" xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17">
+              <g fill="#c5c5c5">
+                <path fill="#c5c5c5" d="M21 8.5L12.125 0v6h-6v5h6v6z" />
+                <path fill="#c5c5c5" d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z" />
+              </g>
+            </svg>
+          </button>
           <ul class="user-navigation">
             <li>
               <a href="#">Мои заказы</a>
@@ -96,71 +112,95 @@
     </ul>
     <h1 class="catalog-title container">Перфораторы</h1>
     <div class="index-columns  container">
-      <h3 class="filter-title">Фильтр:</h3>
+      <h3 class="filters-title">Фильтр:</h3>
       <section class="sorting">
         <h3>Сортировка:</h3>
-        <ul>
-          <li><a href="#">По цене</a></li>
-          <li><a href="#">По типу</a></li>
-          <li><a href="#">По функционалу</a></li>
-          <li><button type="button">Больше</button></li>
-          <li><button type="button">Меньше</button></li>
+        <ul class="sorting-menu">
+          <li>
+            <a href="#">По цене</a>
+          </li>
+          <li>
+            <a href="#">По типу</a>
+          </li>
+          <li>
+            <a href="#">По функционалу</a>
+          </li>
+        </ul>
+        <ul class="sorting-menu sorting-buttons">
+          <li>
+            <button class="up-dir" type="button">
+              <span class="visually-hidden">Больше</span>
+              <svg class="icon-up-dir" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                <path fill="#231F20" d="M5.5 0L0 10h11z" /></svg>
+            </button>
+          </li>
+          <li>
+            <button class="down-dir" type="button">
+              <span class="visually-hidden">Меньше</span>
+              <svg class="icon-down-dir" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                <path fill="#231F20" d="M5.5 10L0 0h11" /></svg>
+            </button>
+          </li>
         </ul>
       </section>
     </div>
     <div class="index-columns container">
-      <section class="filter">
+      <section class="filters">
         <h3 class="visually-hidden">Фильтры товаров</h3>
         <form action="https://echo.htmlacademy.ru" method="get">
-          <fieldset>
+          <fieldset class="price">
             <legend>Цена:</legend>
             <div class="range-slider">
-              <input type="number" value="0" name="min">
-              <span> &#8212; </span>
-              <input type="number" value="30000" name="max">
-              <div class="range-slider-track">
-                <div class="range-slider-pin range-slider-pin-min">
-                </div>
-                <div class="range-slider-pin range-slider-pin-max">
+              <div class="range-slider-background">
+                <div class="range-slider-track">
+                  <div class="range-slider-pin range-slider-pin-min">
+                    <a href="#"></a>
+                  </div>
+                  <div class="range-slider-pin range-slider-pin-max">
+                    <a href="#"></a>
+                  </div>
                 </div>
               </div>
+              <input type="text" value="0" name="min">
+              <span> &#8212; </span>
+              <input type="text" value="30000" name="max">
             </div>
           </fieldset>
-          <fieldset>
+          <fieldset class="manufacturers">
             <legend>Производители:</legend>
             <ul>
               <li>
-                <input type="checkbox" name="bosch" id="bosch" checked>
-                <label for="bosch"> Bosch</label>
+                <input class="visually-hidden" type="checkbox" name="bosch" id="bosch" checked>
+                <label for="bosch">Bosch</label>
               </li>
               <li>
-                <input type="checkbox" name="interskol" id="interskol">
-                <label for="interskol"> Интерскол</label>
+                <input class="visually-hidden" type="checkbox" name="interskol" id="interskol">
+                <label for="interskol">Интерскол</label>
               </li>
               <li>
-                <input type="checkbox" name="makita" id="makita" checked>
-                <label for="makita"> Makita</label>
+                <input class="visually-hidden" type="checkbox" name="makita" id="makita" checked>
+                <label for="makita">Makita</label>
               </li>
               <li>
-                <input type="checkbox" name="dewalt" id="dewalt">
-                <label for="dewalt"> Dewalt</label>
+                <input class="visually-hidden" type="checkbox" name="dewalt" id="dewalt">
+                <label for="dewalt">Dewalt</label>
               </li>
               <li>
-                <input type="checkbox" name="hitachi" id="hitachi">
-                <label for="hitachi"> Hitachi</label>
+                <input class="visually-hidden" type="checkbox" name="hitachi" id="hitachi">
+                <label for="hitachi">Hitachi</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="power">
             <legend>Питание:</legend>
             <ul>
               <li>
-                <input type="radio" name="power-supply" value="rechargeable" id="rechargeable" checked>
-                <label for="rechargeable"> Аккумуляторные</label>
+                <input class="visually-hidden" type="radio" name="power-supply" value="rechargeable" id="rechargeable" checked>
+                <label for="rechargeable">Аккумуляторные</label>
               </li>
               <li>
-                <input type="radio" name="power-supply" value="network" id="network">
-                <label for="network"> Сетевые</label>
+                <input class="visually-hidden" type="radio" name="power-supply" value="network" id="network">
+                <label for="network">Сетевые</label>
               </li>
             </ul>
           </fieldset>
@@ -391,13 +431,13 @@
         <div class="social-buttons">
           <ul>
             <li>
-              <a href="https://vk.com" target="_blank">Вконтакте</a>
+              <a class="vk" href="https://vk.com" target="_blank">Вконтакте</a>
             </li>
             <li>
-              <a href="https://ru-ru.facebook.com" target="_blank">Фейсбук</a>
+              <a class="fb" href="https://ru-ru.facebook.com" target="_blank">Фейсбук</a>
             </li>
             <li>
-              <a href="https://www.instagram.com/?hl=ru" target="_blank">Инстаграм</a>
+              <a class="insta" href="https://www.instagram.com/?hl=ru" target="_blank">Инстаграм</a>
             </li>
           </ul>
         </div>
