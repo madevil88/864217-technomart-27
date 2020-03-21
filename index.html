@@ -6,7 +6,7 @@
   <title>Интернет-магазин «Техномарт»</title>
   <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i%7cPT+Sans:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-min.css">
 </head>
 
 <body>
@@ -19,10 +19,10 @@
         <ul class="main-menu">
           <li>
             <form class="site-search" action="https://echo.htmlacademy.ru" method="get">
-              <label for="site-search">
+              <label class="visually-hidden" for="site-search">
                 Поиск:
               </label>
-              <input type="search" id="site-search" name="search">
+              <input type="text" id="site-search" name="search" placeholder="Поиск:">
               <div class="loupe">
                 <svg class="loupe" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
                   <path fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" />
@@ -44,7 +44,8 @@
     </div>
     <div class="light-blue-background">
       <div class="header-middle-block container">
-        <p class="site-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
+        <p class="site-description">Интернет-магазин строительных материалов <span>и инструментов для ремонта</span>
+        </p>
         <div class="header-contacts">
           <a class="phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
@@ -64,7 +65,7 @@
       <nav class="navigation-box container">
         <ul class="main-navigation">
           <li>
-            <a>Главная</a>
+            <a class="index-page">Главная</a>
           </li>
           <li>
             <a href="#">Компания</a>
@@ -82,7 +83,7 @@
             <a href="#">Доставка</a>
           </li>
           <li>
-            <a href="#">Контакты</a>
+            <a class="contacts-page" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -93,15 +94,15 @@
       <h1 class="visually-hidden">Интернет-магазин «Техномарт»</h1>
       <h2 class="visually-hidden">Разделы сайта</h2>
       <ul class="site-sections1">
-        <li class="label-new">
+        <li class="materials label-new">
           <p>Материалы</p>
           <a class="button" href="#">На любой вкус</a>
         </li>
-        <li>
+        <li class="tool">
           <p>Инструмент</p>
           <a class="button" href="#">На все случаи</a>
         </li>
-        <li>
+        <li class="equipment">
           <p>Техника</p>
           <a class="button" href="#">Для стройки</a>
         </li>
@@ -134,11 +135,11 @@
         </div>
         <!-- конец слайдера -->
         <ul class="site-sections2">
-          <li>
+          <li class="discount">
             <p>Скидка 50%</p>
             <a class="button" href="#">На 350 товаров</a>
           </li>
-          <li>
+          <li class="delivery">
             <p>Доставка</p>
             <a class="button" href="#">Бесплатно</a>
           </li>
@@ -226,42 +227,42 @@
         </div>
         <ul class="manufactures-list">
           <li>
-            <a href="#">
+            <a class="bosch" href="#">
               <img src="img/bosch.png" width="126" height="37" alt="Bosch">
             </a>
           </li>
           <li>
-            <a href="#">
+            <a class="makita" href="#">
               <img src="img/makita.png" width="123" height="40" alt="Makita">
             </a>
           </li>
           <li>
-            <a href="#">
+            <a class="dewalt" href="#">
               <img src="img/dewalt.png" width="146" height="44" alt="Dewalt">
             </a>
           </li>
           <li>
-            <a href="#">
+            <a class="interskol" href="#">
               <img src="img/interskol.png" width="200" height="88" alt="Интерскол">
             </a>
           </li>
           <li>
-            <a href="#">
+            <a class="hitachi" href="#">
               <img src="img/hitachi.png" width="169" height="31" alt="Hitachi">
             </a>
           </li>
           <li>
-            <a href="#">
+            <a class="lg" href="#">
               <img src="img/lg.png" width="121" height="73" alt="LG">
             </a>
           </li>
           <li>
-            <a href="#">
+            <a class="aeg" href="#">
               <img src="img/aeg.png" width="151" height="96" alt="AEG">
             </a>
           </li>
           <li>
-            <a href="#">
+            <a class="metabo" href="#">
               <img src="img/metabo.png" width="204" height="69" alt="Metabo">
             </a>
           </li>
@@ -417,18 +418,23 @@
       </div>
     </div>
   </footer>
+  <section class="popup map">
+    <h2 class="visually-hidden">Как до нас добраться</h2>
+    <img src="img/map.jpg" width="940" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+    <button class="close" type="button">Закрыть</button>
+  </section>
   <section class="popup feedback">
     <h2 class="visually-hidden">Написать нам</h2>
     <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-      <p>
+      <p class="feedback-name">
         <label for="feedback-name">Ваше имя:</label>
         <input type="text" name="name" id="feedback-name" placeholder="Имя Фамилия">
       </p>
-      <p>
+      <p class="feedback-email">
         <label for="feedback-email">Ваш e-mail:</label>
         <input type="email" name="email" id="feedback-email" placeholder="email@example.com">
       </p>
-      <p>
+      <p class="feedback-text">
         <label for="feedback-text">Текст письма:</label>
         <textarea name="feedback-text" id="feedback-text" placeholder="В свободной форме"></textarea>
       </p>
@@ -436,11 +442,6 @@
     <div class="buttons-area">
       <button class="button button-red" type="submit">Отправить</button>
     </div>
-    <button class="close" type="button">Закрыть</button>
-  </section>
-  <section class="popup map">
-    <h2 class="visually-hidden">Как до нас добраться</h2>
-    <img src="img/map.jpg" width="940" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
     <button class="close" type="button">Закрыть</button>
   </section>
 </body>
