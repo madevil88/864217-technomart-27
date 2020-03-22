@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
 
   background-color: #ffffff;
 }
@@ -65,7 +65,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 38px;
+  height: 38px;
   background-color: #ee3643;
 }
 
@@ -151,7 +151,7 @@ a {
   align-items: center;
   position: relative;
   width: 270px;
-  min-height: 42px;
+  height: 42px;
 }
 
 .site-search input {
@@ -164,7 +164,7 @@ a {
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
-  background-color: inherit;
+  background-color: #293449;
   border: none;
 }
 
@@ -189,6 +189,7 @@ a {
   z-index: 1;
 }
 
+.site-search input:hover+.loupe,
 .site-search input:focus+.loupe {
   z-index: 2;
 }
@@ -210,7 +211,7 @@ a {
   align-items: center;
   position: relative;
   width: 150px;
-  min-height: 42px;
+  height: 42px;
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
@@ -307,7 +308,7 @@ a {
 }
 
 .header .site-description {
-  width: 200px;
+  width: 210px;
   margin-top: 45px;
   margin-left: 52px;
   font-size: 16px;
@@ -326,7 +327,7 @@ a {
   flex-direction: column;
   align-self: flex-start;
   margin-top: 42px;
-  margin-left: 67px;
+  margin-left: 57px;
 }
 
 .header .phone {
@@ -396,7 +397,7 @@ a {
   align-items: center;
   text-decoration: none;
   min-width: 150px;
-  min-height: 45px;
+  height: 45px;
   margin-left: 10px;
   font-size: 21px;
   line-height: 21px;
@@ -454,10 +455,9 @@ a {
 .main-navigation a {
   display: flex;
   justify-content: center;
-  padding-top: 21px;
   flex-grow: 1;
   font-size: 17px;
-  line-height: 17px;
+  line-height: 60px;
   text-align: left;
   color: #ffffff;
 }
@@ -745,7 +745,7 @@ a {
   margin-right: 20px;
   margin-bottom: 5px;
   overflow: hidden;
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
   border: 1px solid #eaeaea;
 }
@@ -837,7 +837,8 @@ a {
   box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
-.good-list .good-item:hover>img {
+.good-list .good-item:hover>img,
+.good-active img {
   visibility: hidden;
 }
 
@@ -888,7 +889,7 @@ a {
   justify-content: center;
   align-items: center;
   width: 135px;
-  min-height: 38px;
+  height: 38px;
   padding-left: 3px;
   font-size: 14px;
   letter-spacing: -1.5px;
@@ -974,7 +975,7 @@ a {
 }
 
 .services-description p {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
   text-align: left;
@@ -1008,34 +1009,33 @@ a {
 
 .services-slider-controls ul {
   margin: 0;
-  margin-top: 46px;
+  margin-top: 45px;
   padding: 0;
   list-style: none;
 }
 
-.services-slider-controls a {
-  display: block;
+.services-slider-controls button {
   width: 240px;
   min-height: 62px;
-  padding-top: 14px;
   padding-left: 22px;
   font-size: 21px;
   font-weight: bold;
-  line-height: 30px;
+  line-height: 29px;
   text-align: left;
   color: #ffffff;
   background-color: #32425c;
+  border: none;
   box-shadow:
     0px 1px 0 0 #293449,
     inset 0px 1px 0 0 #405069;
 }
 
-.services-slider-controls a:hover,
-.services-slider-controls a:focus {
+.services-slider-controls button:hover,
+.services-slider-controls button:focus {
   background-color: #293449;
 }
 
-.services-slider-controls a:active {
+.services-slider-controls .active {
   color: #32425c;
   background-color: #ffffff;
   box-shadow: none;
@@ -1094,7 +1094,7 @@ a {
 }
 
 .slide-description p {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
   text-align: left;
@@ -1150,7 +1150,7 @@ a {
 .contacts p {
   margin: 0;
   margin-bottom: 24px;
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   letter-spacing: 0.1px;
   line-height: 24px;
@@ -1423,12 +1423,12 @@ a {
   width: 300px;
 }
 
-.user-login, 
+.user-login,
 .user-login a {
   display: flex;
   font-size: 21px;
   line-height: 21px;
-  min-height: 40px;
+  height: 45px;
   margin-bottom: 5px;
   color: #000000;
   background-color: #ffffff;
@@ -1500,7 +1500,7 @@ a {
 }
 
 .catalog-main-container {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
 }
 
@@ -1509,7 +1509,7 @@ a {
   padding-left: 29px;
   padding-bottom: 30px;
   margin-bottom: 20px;
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   font-weight: 400;
   line-height: 30px;
@@ -1523,7 +1523,7 @@ a {
   flex-wrap: wrap;
   align-items: center;
   width: 940px;
-  min-height: 59px;
+  height: 59px;
   padding: 0;
   list-style: none;
   order: 1;
@@ -1594,7 +1594,7 @@ a {
 .filters-title {
   display: flex;
   align-items: center;
-  min-height: 38px;
+  height: 38px;
   margin: 0;
   margin-bottom: 19px;
   padding-left: 20px;
@@ -1654,6 +1654,10 @@ a {
   background-repeat: no-repeat;
 }
 
+.filters input:focus+label::before {
+  outline: 2px solid #99baf0;
+}
+
 .manufacturers label::before {
   width: 23px;
   height: 23px;
@@ -1684,6 +1688,8 @@ a {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  width: 220px;
+  height: 127px;
 }
 
 .range-slider-background {
@@ -1715,9 +1721,12 @@ a {
 
 .range-slider-pin {
   position: absolute;
+  display: block;
   top: -10px;
   width: 20px;
   height: 23px;
+  border: none;
+  background: none;
   background-image: url(../img/filter-button.svg);
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -1748,7 +1757,7 @@ a {
 /*конец фильтра цены*/
 
 
-.filters button {
+.filters-button {
   text-transform: uppercase;
   min-width: 140px;
   min-height: 38px;
@@ -1806,7 +1815,7 @@ a {
   border-bottom: 1px solid #ee3643;
 }
 
-.sorting-menu a:active {
+.sorting-menu .sorting-active {
   color: #ee3643;
   border-bottom: none;
 }
@@ -1824,7 +1833,7 @@ a {
   height: 38px;
   margin-right: 5px;
   border: none;
-  background-color: inherit;
+  background: none;
 }
 
 .sorting-menu .icon-up-dir,
@@ -1841,8 +1850,13 @@ a {
   opacity: 1;
 }
 
-.up-dir:active path,
-.down-dir:active path {
+.icon-up-dir.sorting-active,
+.icon-down-dir.sorting-active {
+  opacity: 1;
+}
+
+.icon-up-dir.sorting-active path,
+.icon-down-dir.sorting-active path {
   fill: #ee3643;
 }
 
@@ -1878,7 +1892,7 @@ a {
   justify-content: center;
   align-items: center;
   min-width: 38px;
-  min-height: 38px;
+  height: 38px;
   margin-right: 10px;
   font-size: 13px;
   line-height: 18px;
@@ -1913,7 +1927,7 @@ a {
 
 .category-description h2 {
   padding-top: 66px;
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30.5px;
   font-weight: normal;
   line-height: 30px;
@@ -1930,8 +1944,12 @@ a {
 
 /*modul windows*/
 .popup {
-  position: relative;
+  position: fixed;
   display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
 }
 
 .popup .buttons-area {
@@ -1978,10 +1996,7 @@ a {
 
 /*cartplus*/
 .cartplus {
-  top: -1840px;
-  left: 50%;
   width: 620px;
-  margin-left: -310px;
   background-color: #ffffff;
   border-top: 7px solid #ff5358;
   box-shadow: 0px 20px 40px 0 rgba(41, 52, 73, 0.75);
@@ -2021,11 +2036,8 @@ a {
 
 /*feedback*/
 .feedback {
-  top: -1078px;
-  left: 50%;
   width: 620px;
   min-height: 430px;
-  margin-left: -310px;
   border-top: 7px solid #ff5358;
   background-color: #ffffff;
   box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
@@ -2037,20 +2049,27 @@ a {
   justify-content: center;
   align-items: center;
   margin-top: 25px;
-  margin-left: 80px;
-  width: 460px;
 }
 
 .feedback-form p {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   margin: 0;
   margin-top: 22px;
 }
 
-.feedback-form p:first-child {
-  margin-right: 20px;
+.feedback-form .feedback-name {
+  margin-left: 80px;
+}
+
+.feedback-form .feedback-email {
+  margin-left: 20px;
+  margin-right: 80px;
+}
+
+.feedback-form .feedback-text {
+  width: 460px;
+  margin-left: 80px;
 }
 
 .feedback label {
@@ -2084,7 +2103,7 @@ a {
 .feedback textarea::placeholder {
   padding-top: 10px;
   padding-left: 13px;
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-align: left;
@@ -2102,11 +2121,9 @@ a {
 
 /*map*/
 .map {
-  top: -805px;
-  left: 50%;
+  top: 38%;
   width: 940px;
   height: 446px;
-  margin-left: -470px;
   box-shadow: 0 0 14.7px 1.3px rgba(47, 42, 43, 0.5);
 }
 

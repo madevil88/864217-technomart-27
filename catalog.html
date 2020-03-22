@@ -123,7 +123,7 @@
         <h3>Сортировка:</h3>
         <ul class="sorting-menu">
           <li class="sorting-price">
-            <a href="#">По цене</a>
+            <a class="sorting-active" href="#">По цене</a>
           </li>
           <li class="sorting-type">
             <a href="#">По типу</a>
@@ -136,7 +136,7 @@
           <li>
             <button class="up-dir" type="button">
               <span class="visually-hidden">Больше</span>
-              <svg class="icon-up-dir" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+              <svg class="icon-up-dir sorting-active" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                 <path fill="#231F20" d="M5.5 0L0 10h11z" /></svg>
             </button>
           </li>
@@ -159,12 +159,10 @@
             <div class="range-slider">
               <div class="range-slider-background">
                 <div class="range-slider-track">
-                  <div class="range-slider-pin range-slider-pin-min">
-                    <a href="#"></a>
-                  </div>
-                  <div class="range-slider-pin range-slider-pin-max">
-                    <a href="#"></a>
-                  </div>
+                  <button class="range-slider-pin range-slider-pin-min">
+                  </button>
+                  <button class="range-slider-pin range-slider-pin-max">
+                  </button>
                 </div>
               </div>
               <input type="text" value="0" name="min">
@@ -210,7 +208,7 @@
               </li>
             </ul>
           </fieldset>
-          <button type="submit">Показать</button>
+          <button class="filters-button" type="submit">Показать</button>
         </form>
       </section>
       <section>
@@ -250,7 +248,7 @@
               <a class="button-item" href="#">25500 Р.</a>
             </p>
           </li>
-          <li class="good-item label-new">
+          <li class="good-item good-active label-new">
             <div class="order-item">
               <a class="button buy" href="#">Купить</a>
               <a class="button to-bookmarks" href="#">В закладки</a>
