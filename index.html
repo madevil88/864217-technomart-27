@@ -6,7 +6,7 @@
   <title>Интернет-магазин «Техномарт»</title>
   <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i%7cPT+Sans:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style-min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -52,7 +52,7 @@
         </div>
         <ul class="user-navigation">
           <li>
-            <a class="sign-in" href="#">Войти</a>
+            <a class="sign-in" href="login.html">Войти</a>
             <svg class="icon-login" xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
               <path fill="#c5c5c5" d="M14.875 8.5L6 0v6H0v5h6v6z" />
               <path fill="#c5c5c5" d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z" /></svg>
@@ -436,7 +436,7 @@
     <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
       <p class="feedback-name">
         <label for="feedback-name">Ваше имя:</label>
-        <input type="text" name="name" id="feedback-name" placeholder="Имя Фамилия">
+        <input type="text" name="user-name" id="feedback-name" placeholder="Имя Фамилия">
       </p>
       <p class="feedback-email">
         <label for="feedback-email">Ваш e-mail:</label>
@@ -452,6 +452,8 @@
     </form>
     <button class="close" type="button">Закрыть</button>
   </section>
+  <script src="js/script.js"></script>
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 
 </html>
