@@ -2193,6 +2193,9 @@ a {
   width: 940px;
   height: 446px;
   margin-left: -470px;
+  background-color: red;
+  background-image: url(../img/map.jpg);
+  background-repeat: no-repeat;
   box-shadow: 0 0 14.7px 1.3px rgba(47, 42, 43, 0.5);
 }
 
